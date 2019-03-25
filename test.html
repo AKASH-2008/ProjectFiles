@@ -1,0 +1,168 @@
+<form action="" method="post" >
+        <div class="input-wrapper">
+            <input type="text" placeholder="First Name" id="fname" name="firstname"/>
+
+            <input type="text" placeholder="Last Name" id="lname" name="lastname"/>
+            
+            <input type="text" placeholder="Age" id="age" name="age_" />
+            
+            <select name="Gender">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    </select>
+                     <input type="text" placeholder="Contact Number" id="contact" name="contact_no" />
+
+                    <input type="text" placeholder="City" id="city" name="city" />
+
+                    <input type="text" placeholder="State" id="state" name="state" />
+
+                    <input type="text" placeholder="UserID" name="userid" id="userID" />
+
+                    <input type="password" placeholder="Password" name="password" id = "password"/>
+
+                    <input type="submit" value="Register" name="register" onclick="FormValidation()" />
+        </div>
+    <script>
+    function FormValidation(){
+//First Name Validation 
+    var fn=document.getElementById('fname').value;
+    if(fn == ""){
+        document.getElementById('fname').style.borderColor = "red";
+        alert("Enter First Name");
+        return false;
+    }else{
+        document.getElementById('fname').style.borderColor = "green";
+    }
+    if(fn.length >=50 ||fn.length <=2){
+        document.getElementById('fname').style.borderColor = "red";
+        return false;
+    }else{
+        document.getElementById('fname').style.borderColor = "green";
+    }
+//Last Name Validation
+    var fn1=document.getElementById('lname').value;
+    if(fn1 == ""){
+        document.getElementById('lname').style.borderColor = "red";
+        alert("Enter Last Name");
+        return false;
+    }else{
+        document.getElementById('lname').style.borderColor = "green";
+    }
+    if(fn1.length >=50 ||fn1.length <=2){
+        document.getElementById('lname').style.borderColor = "red";
+        return false;
+    }else{
+        document.getElementById('lname').style.borderColor = "green";
+    }
+//Age Validation
+    var fn2=document.getElementById('age').value;
+    if(fn2 == ""){
+        document.getElementById('age').style.borderColor = "red";
+        alert("Enter Age");
+        return false;
+    }else{
+        document.getElementById('age').style.borderColor = "green";
+    }
+    if(isNaN(fn2)){
+        document.getElementById('age').style.borderColor = "red";
+        alert("Input Correct Age");
+        return false;
+    }else{
+        document.getElementById('age').style.borderColor = "green";
+    }
+    if(fn2.length > 2){
+        document.getElementById('lname').style.borderColor = "red";
+        alert("Age must be between 0-99");
+        return false;
+    }else{
+        document.getElementById('lname').style.borderColor = "green";
+    }
+//Contact Validation
+    var fn3=document.getElementById('contact').value;
+    if(fn3 == ""){
+        document.getElementById('contact').style.borderColor = "red";
+        alert("Enter Contact");
+        return false;
+    }else{
+        document.getElementById('contact').style.borderColor = "green";
+    }
+    if(isNaN(fn3)){
+        document.getElementById('contact').style.borderColor = "red";
+        alert("Input Correct Phone");
+        return false;
+    }else{
+        document.getElementById('contact').style.borderColor = "green";
+    }
+    if(fn3.length > 10 || fn3.length < 10){
+        document.getElementById('lname').style.borderColor = "red";
+        alert("Enter Correct Phone No");
+        return false;
+    }else{
+        document.getElementById('lname').style.borderColor = "green";
+    }
+//City Validation    
+    var fn4=document.getElementById('city').value;
+    if(fn4 == ""){
+        document.getElementById('city').style.borderColor = "red";
+        alert("Enter City");
+        return false;
+    }else{
+        document.getElementById('city').style.borderColor = "green";
+    }
+    if(fn4.length > 15){
+        document.getElementById('city').style.borderColor = "red";
+        alert("City Name Invalid");
+        return false;
+    }else{
+        document.getElementById('city').style.borderColor = "green";
+    }
+//State Validation
+    var fn5=document.getElementById('state').value;
+    if(fn5 == ""){
+        document.getElementById('state').style.borderColor = "red";
+        alert("Enter State");
+        return false;
+    }else{
+        document.getElementById('state').style.borderColor = "green";
+    }
+    if(fn5.length > 15){
+        document.getElementById('state').style.borderColor = "red";
+        alert("State name is Invalid");
+        return false;
+    }else{
+        document.getElementById('state').style.borderColor = "green";
+    }
+//UserID Validation
+    var fn6=document.getElementById('userID').value;
+    if(fn6 == ""){
+        document.getElementById('userID').style.borderColor = "red";
+        alert("Username can not be empty");
+        return false;
+    }else{
+        document.getElementById('userID').style.borderColor = "green";
+    }
+    if(fn6.length > 15){
+        document.getElementById('userID').style.borderColor = "red";
+        alert("Username limit exceed --length = 15--");
+        return false;
+    }else{
+        document.getElementById('userID').style.borderColor = "green";
+    }
+
+    var fn7=document.getElementById('password').value;
+    if(fn7 == ""){
+        document.getElementById('password').style.borderColor = "red";
+        alert("Password can't be empty");
+        return false;
+    }else{
+        document.getElementById('password').style.borderColor = "green";
+    }
+    if(fn7.length > 15){
+        document.getElementById('password').style.borderColor = "red";
+        alert("Password Limit exceeds --15 letter--");
+        return false;
+    }else{
+        document.getElementById('password').style.borderColor = "green";
+    }
+}
+    </script>
